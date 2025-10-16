@@ -1,0 +1,179 @@
+<div class="container">
+    <section id="landing">
+        <div class="row profile d-flex align-items-center">
+            <div class="col-lg-4">
+                <img src="/assets/img/profile.jpg" width="300" height="300" alt="Yuanthio Virly">
+            </div>
+            <div class="col-lg-8">
+                <h1 class="fw-bold">Hi, I'm Yuanthio 👋</h1>
+                <h3 class="my-4 fw-bold">Fullstack Developer</h3>
+                <p>I design and build complete digital products—from concept to production. Passionate about crafting
+                    seamless end-to-end solutions, I bring ideas to life through clean, efficient, and scalable
+                    applications. With full-stack expertise, I handle everything from architecture and development to
+                    deployment and beyond.</p>
+                <span><i class="bi bi-geo-alt-fill"></i> Bogor, Kertamaya, Indonesia</span>
+                <div class="lamp">
+                    <div class="lamp-projects d-flex align-items-center mt-3">
+                        <div class="circle me-2"></div>
+                        <div>Available for new projects</div>
+                    </div>
+                </div>
+                <div class="btns mt-4">
+                    <a class="btn btn-whatsapp fw-bold me-2 px-5 py-2" href="https://api.whatsapp.com/send?phone=62895336035920"><i class="bi bi-whatsapp"></i> Let's
+                        Talk</a>
+                    <a class="btn btn-cv fw-bold me-2 px-5 py-2" href="https://drive.google.com/file/d/10_DOVK5vcQPKWCBr0ck2U2TS1W0Te0pT/view?usp=sharing"><i class="bi bi-file-earmark-arrow-down"></i>
+                        Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tools">
+        <h3 class="fw-bold mb-5">Tech Stack - Tools I Use Everyday</h3>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide text-center d-flex flex-column">
+                    <div class="d-flex justify-content-center align-items-center tool p-2 mb-3">
+                        <img src="/assets/img/react.png" width="40" alt="">
+                    </div>
+                    <span class="text-tool">React.js</span>
+                </div>
+                <div class="swiper-slide text-center d-flex flex-column">
+                    <div class="d-flex justify-content-center align-items-center tool p-2 mb-3">
+                        <img src="/assets/img/node.png" width="40" alt="">
+                    </div>
+                    <span class="text-tool">Node.js</span>
+                </div>
+                <div class="swiper-slide text-center d-flex flex-column">
+                    <div class="d-flex justify-content-center align-items-center tool p-2 mb-3">
+                        <img src="/assets/img/javascript.png" width="40" alt="">
+                    </div>
+                    <span class="text-tool">Javascript</span>
+                </div>
+                <div class="swiper-slide text-center d-flex flex-column">
+                    <div class="d-flex justify-content-center align-items-center tool p-2 mb-3">
+                        <img src="/assets/img/PHP.png" width="40" alt="">
+                    </div>
+                    <span class="text-tool">PHP</span>
+                </div>
+                <div class="swiper-slide text-center d-flex flex-column">
+                    <div class="d-flex justify-content-center align-items-center tool p-2 mb-3">
+                        <img src="/assets/img/Bootstrap.png" width="40" alt="">
+                    </div>
+                    <span class="text-tool">Bootstrap</span>
+                </div>
+                <div class="swiper-slide text-center d-flex flex-column">
+                    <div class="d-flex justify-content-center align-items-center tool p-2 mb-3">
+                        <img src="/assets/img/postgre.png" width="40" alt="">
+                    </div>
+                    <span class="text-tool">PostgreSQL</span>
+                </div>
+                <div class="swiper-slide text-center d-flex flex-column">
+                    <div class="d-flex justify-content-center align-items-center tool p-2 mb-3">
+                        <img src="/assets/img/css.png" width="40" alt="">
+                    </div>
+                    <span class="text-tool">CSS</span>
+                </div>
+                <div class="swiper-slide text-center d-flex flex-column">
+                    <div class="d-flex justify-content-center align-items-center tool p-2 mb-3">
+                        <img src="/assets/img/html.png" width="40" alt="">
+                    </div>
+                    <span class="text-tool">HTML</span>
+                </div>
+                <div class="swiper-slide text-center d-flex flex-column">
+                    <div class="d-flex justify-content-center align-items-center tool p-2 mb-3">
+                        <img src="/assets/img/mysql.png" width="40" alt="">
+                    </div>
+                    <span class="text-tool">MySQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="work-experiences">
+        <h3 class="fw-bold mb-5">Work Experiences:</h3>
+        {{#if dataExperiences.length}}
+            {{#each dataExperiences }}
+                <div class="card p-4 mb-4">
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <img src="/assets/img/upload_company/{{ this.company_logo }}" width="64" alt="{{ this.company }}">
+                        </div>
+                        <div class="col-lg-11">
+                            <div class="row d-flex justify-content-beetwen">
+                                <div class="col-lg-6 col-12">
+                                    <h4 class="fw-bold">{{ this.position }}</h4>
+                                    <p>{{ this.company }}</p>
+                                </div>
+                                <div class="col-lg-6 col-12 format-date">
+                                    <span class="date">{{ formatDate this.start_date }} - {{ formatDate this.end_date }}</span>
+                                </div>
+                            </div>
+                            <ul>
+                                {{#each this.description }}
+                                    <li class="mb-2">{{ this }}</li>
+                                {{/each}}
+                            </ul>
+                            <div class="tools">
+                                {{#each this.technologies }}
+                                    <span class="py-1 px-3">{{ this }}</span>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        {{/if}}
+    </section>
+    <section id="projects">
+        <h3 class="fw-bold mb-5">My Projects:</h3>
+        <div class="row">
+            {{#if dataProjects.length}}
+                {{#each dataProjects }}
+                    <div class="col-lg-6 mb-4">
+                        <div class="card">
+                            <div class="row picture-project d-flex justify-content-center mx-0">
+                                <div class="col-lg-6">
+                                    <img src="/assets/img/upload_projects/{{ this.picture }}" class="img-fluid" alt="{{ this.title }}">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">{{ this.title }}</h5>
+                                <p class="card-text">{{ this.description }}</p>
+                                <div class="tools mb-4">
+                                    {{#each this.technologies }}
+                                        <span class="py-1 px-3">{{ this }}</span>
+                                    {{/each}}
+                                </div>
+                                <div class="link">
+                                    <span class="me-4"><i class="bi bi-github fs-5"></i> Private Repository</span>
+                                    <a href="{{ this.demo_url }}" class="text-decoration-none"><i class="bi bi-box-arrow-up-right"></i> Demo Live</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            {{else}}
+                <div class="alert alert-warning text-center" role="alert">
+                    No data yet
+                </div>   
+            {{/if}}
+        </div>
+    </section>
+    <section id="contact" class="text-center">
+        <h3 class="fw-bold">Let's build something together</h3>
+        <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+        <div class="link-contact">
+            <a href="" class="text-decoration-none"><i class="bi bi-envelope"></i> yuanthiovirly26.9a.tik@gmail.com</a>
+            <span class="mx-3 pembatas">|</span>
+            <span><i class="bi bi-whatsapp me-3"></i> +62 8953-3603-5920</span>
+        </div>
+    </section>
+</div>
+<footer>
+    <div class="container text-center py-4">
+        <p>© 2025 Designed and coded with ❤️ by Yuanthio Virly</p>
+        <div class="social-media">
+            <a href="" class="text-decoration-none mx-1"><i class="bi bi-github"></i></a>
+            <a href="" class="text-decoration-none mx-1"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </div>
+</footer>

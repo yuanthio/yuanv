@@ -1,0 +1,23 @@
+body {
+  overflow-x: hidden;
+  background-color: #454545;
+}
+
+#projects-edit {
+    margin-top: 82px;
+}
+
+#projects-edit form {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+}
+
+#projects-edit form input {
+    background-color: #454545;
+    border: none;
+    color: white;
+}
+
+#projects-edit form input::placeholder {
+    color: rgb(166, 166, 166);
+}

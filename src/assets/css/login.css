@@ -1,0 +1,46 @@
+body {
+    background-color: #454545;
+}
+
+.container-login {
+    height: 100vh;
+    width: 100%;
+}
+
+.container-login .login a {
+    top: 10px;
+    left: 25px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.21);
+    padding: 4px 8px;
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+}
+
+.container-login .login {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.37);
+}
+
+.container-login .login,
+img {
+    border-radius: 10px;
+}
+
+.container-login .login input {
+    background-color: #454545;
+    border: none;
+    color: white;
+}
+
+.container-login .login button {
+    background-color: #454545;
+    color: white;
+}
+
+.container-login .login input::placeholder {
+    color: rgb(166, 166, 166);
+}
+
+.container-login .login .btn-close {
+    background-color: white;
+}

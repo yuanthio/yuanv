@@ -1,0 +1,15 @@
+body {
+    background-color: #454545;
+}
+
+#projects {
+    margin: 150px 0;
+}
+
+#projects table {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.374);
+}
+
+#projects table ul {
+    padding-left: 15px;
+}

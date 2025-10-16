@@ -1,0 +1,49 @@
+<div class="container">
+    <section id="projects">
+        {{#if msg}}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ msg }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {{/if}}
+        <a class="btn btn-success mb-3" href="/projects-admin/add" role="button"><i class="bi bi-plus-lg"></i> Add Projects</a>
+        <table class="table table-striped table-dark table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Picture</th>
+                    <th scope="col" width="300">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#if dataProjects.length}}
+                    {{#each dataProjects }}
+                        <tr>
+                            <th scope="row">{{ increment @index }}</th>
+                            <td>{{ this.title }}</td>
+                            <td>{{ this.description }}</td>
+                            <td>
+                                <img src="/assets/img/upload_projects/{{ this.picture }}" width="100" alt="">
+                            </td>
+                            <td>
+                                <a href="/projects-admin/edit/{{ this.id }}" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Edit</a>
+                                <a href="/projects-admin/detail/{{ this.id }}" class="btn btn-info"><i class="bi bi-info-circle-fill"></i> Detail</a>
+                                <a href="/projects-admin/delete/{{ this.id }}" class="btn btn-danger"><i class="bi bi-trash-fill"></i> Delete</a>
+                            </td>
+                        </tr>
+                    {{/each}}       
+                {{else}}
+                    <tr>
+                        <td colspan="5">
+                            <div class="alert alert-warning text-center" role="alert">
+                                No data yet
+                            </div>                          
+                        </td>
+                    </tr>
+                {{/if}}
+            </tbody>
+        </table>
+    </section>
+</div>

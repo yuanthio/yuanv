@@ -1,0 +1,23 @@
+body {
+  overflow-x: hidden;
+  background-color: #454545;
+}
+
+#experiences-edit {
+    margin-top: 82px;
+}
+
+#experiences-edit form {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+}
+
+#experiences-edit form input {
+    background-color: #454545;
+    border: none;
+    color: white;
+}
+
+#experiences-edit form input::placeholder {
+    color: rgb(166, 166, 166);
+}

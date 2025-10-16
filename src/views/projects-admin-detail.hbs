@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row d-flex justify-content-center align-items-center detail py-5">
+        <div class="col-lg-6 my-5">
+            <div class="card">
+                {{#if data}}
+                    <div class="logo text-center p-4">
+                        <img src="/assets/img/upload_projects/{{ data.picture }}" width="250" alt="{{ data.title }}">
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped table-bordered table-dark">
+                            <tbody>
+                                <tr>
+                                    <th scope="row" width="150">Title</th>
+                                    <td>{{ data.title }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" width="150">Description</th>
+                                    <td>{{ data.description }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" width="150">Technologies</th>
+                                    <td>
+                                        {{#each data.technologies }}
+                                            <ul>
+                                                <li>{{ this }}</li>
+                                            </ul>
+                                        {{/each}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" width="150">Demo URL</th>
+                                    <td>
+                                        <a href="{{ data.demo_url }}">{{ data.demo_url }}</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns d-flex justify-content-center">
+                            <a href="/projects-admin" class="btn btn-danger"><i class="bi bi-backspace-fill"></i> Back to data projects</a>
+                        </div>
+                    </div>
+                {{else}}
+                    <div class="alert alert-warning text-center" role="alert">
+                        No data yet
+                    </div> 
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>

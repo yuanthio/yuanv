@@ -1,0 +1,16 @@
+body {
+    background-color: #454545;
+}
+
+.detail {
+    margin-top: 82px;
+}
+
+.detail table ul {
+    padding-left: 15px;
+}
+
+.detail .card {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.374);
+    border-radius: 10px;
+}

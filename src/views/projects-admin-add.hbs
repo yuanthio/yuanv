@@ -1,0 +1,124 @@
+<section id="projects-add">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-6">
+            <form class="bg-dark text-light p-4 my-5" action="/projects-admin-add" method="post" enctype="multipart/form-data">
+                <h3 class="text-center mb-4">Add Projects</h3>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" name="title" class="form-control" required id="title" placeholder="Enter title">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" name="description" class="form-control" required id="description" placeholder="Enter description">
+                </div>
+                <div class="mb-3">
+                    <label for="technologies" class="form-label">Technologies</label>
+                    <div class="row gy-3">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="Node JS"
+                                    id="checkNodeJs">
+                                <label class="form-check-label" for="checkNodeJs">
+                                    Node JS
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 com-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="Javascript"
+                                    id="checkJavascript">
+                                <label class="form-check-label" for="checkJavascript">
+                                    Javascript
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 com-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="Bootstrap"
+                                    id="checkBootstrap">
+                                <label class="form-check-label" for="checkBootstrap">
+                                    Bootstrap
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 com-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="HTML"
+                                    id="checkHtml">
+                                <label class="form-check-label" for="checkHtml">
+                                    HTML
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 com-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="CSS"
+                                    id="checkCss">
+                                <label class="form-check-label" for="checkCss">
+                                    CSS
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 com-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="PHP"
+                                    id="checkPhp">
+                                <label class="form-check-label" for="checkPhp">
+                                    PHP
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 com-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="PostgreeSQL"
+                                    id="checkPostgreSql">
+                                <label class="form-check-label" for="checkPostgreSql">
+                                    PostgreeSQL
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 com-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="MySQL"
+                                    id="checkMysql">
+                                <label class="form-check-label" for="checkMysql">
+                                    MySQL
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 com-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="Express JS"
+                                    id="checkExpressJs">
+                                <label class="form-check-label" for="checkExpressJs">
+                                    Express JS
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 com-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="React JS"
+                                    id="checkReactJs">
+                                <label class="form-check-label" for="checkReactJs">
+                                    React JS
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="mb-3">
+                    <label for="demo_url" class="form-label">Demo URL</label>
+                    <input type="text" name="demo_url" class="form-control" id="demo_url" placeholder="Enter link demo url">
+                </div>
+                <div class="mb-3">
+                    <label for="picture-projects" class="form-label">Upload Picture</label>
+                    <input class="form-control" name="picture-projects" type="file" id="picture-projects">
+                </div>
+                <div class="btns d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary mx-1"><i class="bi bi-send-fill"></i> Submit</button>
+                    <button type="reset" class="btn btn-warning mx-1"><i class="bi bi-arrow-clockwise"></i> Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

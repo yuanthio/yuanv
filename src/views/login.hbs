@@ -1,0 +1,35 @@
+<div class="row justify-content-center align-items-center container-login">
+    <div class="col-lg-8 col-sm-8">
+        <div class="row bg-dark py-4 px-2 d-flex align-items-center login">
+            <div class="col-lg-6 position-relative">
+                <a href="/home" class="text-decoration-none position-absolute"><i class="bi bi-arrow-left"></i> Back to
+                    home</a>
+                <img src="/assets/img/pastel-login.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 text-light px-5">
+                {{#if msg}}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ msg }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {{/if}}
+                <h3 class="text-center mb-4">Login Account</h3>
+                <form action="/login" method="post">
+                    <div class="mb-3">
+                        <label for="email" class="form-label"><i class="bi bi-envelope"></i> Email address</label>
+                        <input type="email" name="email" class="form-control" required placeholder="Enter email"
+                            id="email">
+                    </div>
+                    <div class="mb-5">
+                        <label for="password" class="form-label"><i class="bi bi-key-fill"></i> Password</label>
+                        <input type="password" name="password" class="form-control" required
+                            placeholder="Enter password" id="password">
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn"><i class="bi bi-box-arrow-in-right"></i> Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

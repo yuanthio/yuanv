@@ -1,0 +1,111 @@
+<section id="projects-edit">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-6">
+            {{#if data}}
+            <form class="bg-dark text-light p-4 my-5" action="/projects-admin/edit/{{ data.id }}" method="post"
+                enctype="multipart/form-data">
+                <h3 class="text-center mb-4">Edit Projects</h3>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" name="title" class="form-control" value="{{ data.title }}" required id="title"
+                        placeholder="Enter title">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" name="description" class="form-control" value="{{ data.description }}" required
+                        id="description" placeholder="Enter description">
+                </div>
+                <div class="mb-3">
+                    <label for="technologies" class="form-label">Technologies</label>
+                    <div class="row gy-3">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="Node JS"
+                                    id="checkNodeJs" {{isChecked data.technologies "Node JS" }}>
+                                <label class="form-check-label" for="checkNodeJs">Node JS</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="Javascript"
+                                    id="checkJavascript" {{isChecked data.technologies "Javascript" }}>
+                                <label class="form-check-label" for="checkJavascript">Javascript</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="Bootstrap"
+                                    id="checkBootstrap" {{isChecked data.technologies "Bootstrap" }}>
+                                <label class="form-check-label" for="checkBootstrap">Bootstrap</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="HTML"
+                                    id="checkHtml" {{isChecked data.technologies "HTML" }}>
+                                <label class="form-check-label" for="checkHtml">HTML</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="CSS"
+                                    id="checkCss" {{isChecked data.technologies "CSS" }}>
+                                <label class="form-check-label" for="checkCss">CSS</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="PHP"
+                                    id="checkPhp" {{isChecked data.technologies "PHP" }}>
+                                <label class="form-check-label" for="checkPhp">PHP</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="MySQL"
+                                    id="checkMysql" {{isChecked data.technologies "MySQL" }}>
+                                <label class="form-check-label" for="checkMysql">MySQL</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="PostgreeSQL"
+                                    id="checkPostgreeSQL" {{isChecked data.technologies "PostgreeSQL" }}>
+                                <label class="form-check-label" for="checkPostgreeSQL">PostgreeSQL</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="Express JS" id="checkExpressJs" {{isChecked data.technologies "Express JS" }}>
+                                <label class="form-check-label" for="checkExpressJs">Express JS</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" name="technologies" type="checkbox" value="React JS" id="checkReactJs" {{isChecked data.technologies "React Js" }}>
+                                <label class="form-check-label" for="checkReactJs">React JS</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="demo_url" class="form-label">Demo URL</label>
+                    <input type="text" name="demo_url" class="form-control" value="{{ data.demo_url }}" id="demo_url"
+                        placeholder="Enter link demo url">
+                </div>
+                <div class="mb-3">
+                    <label for="picture-projects" class="form-label">Upload Picture</label>
+                    <input class="form-control" name="picture-projects" type="file" id="picture-projects">
+                    <div class="mt-2">
+                        <p>Current logo :</p>
+                        <img src="/assets/img/upload_projects/{{ data.picture }}" width="150" alt="Company Logo">
+                    </div>
+                </div>
+                <div class="btns d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary mx-1"><i class="bi bi-send-fill"></i> Submit</button>
+                </div>
+            </form>
+            {{/if}}
+        </div>
+    </div>
+</section>

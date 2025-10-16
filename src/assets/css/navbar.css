@@ -1,0 +1,34 @@
+nav {
+    background-color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.041);
+}
+
+.menu {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+img {
+    object-fit: cover;
+}
+
+.btn-whatsapp {
+    background-color: #22C55E;
+    color: white;
+}
+
+.btn.download-cv {
+    background-color: black;
+    color: white;
+}
+
+@media(max-width: 992px) {
+    .menu {
+        justify-content: start;
+    }
+
+    .menu ul li {
+        margin-bottom: 10px;
+    }
+}

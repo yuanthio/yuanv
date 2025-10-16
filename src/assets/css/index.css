@@ -1,0 +1,434 @@
+#landing {
+    margin-top: 180px;
+}
+
+#landing .profile img {
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.498);
+}
+
+#landing .profile h1 {
+    font-size: 60px;
+}
+
+#landing .profile h3 {
+    font-size: 24px;
+    color: #4B5563;
+}
+
+#landing .profile p {
+    font-size: 18px;
+    color: #4B5563;
+}
+
+#landing .profile span,
+.lamp-projects {
+    font-size: 16px;
+    color: #6B7280;
+}
+
+#landing .profile .circle {
+    width: 8px;
+    height: 8px;
+    background-color: #22C55E;
+    border-radius: 50%;
+}
+
+#landing .profile .btn-whatsapp {
+    background-color: #22C55E;
+    font-size: 16px;
+    color: white;
+}
+
+#landing .profile .btn-cv {
+    background-color: #000000;
+    font-size: 16px;
+    color: white;
+}
+
+#tools {
+    margin-top: 130px;
+}
+
+#tools h3 {
+    font-size: 30px;
+}
+
+#tools .tool {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.135);
+    border-radius: 10px;
+    height: 70px;
+}
+
+#tools .swiper-slide .text-tool {
+    font-size: 14px;
+    color: #515B68;
+}
+
+#tools .swiper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#tools .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+#tools .swiper-slide {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    padding: 0 40px;
+}
+
+#tools .swiper::before,
+.swiper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#tools .swiper::before {
+    left: 0;
+    background: linear-gradient(to right, #fff 0%, rgba(34, 197, 94, 0) 100%);
+}
+
+#tools .swiper::after {
+    right: 0;
+    background: linear-gradient(to left, #fff 0%, rgba(34, 197, 94, 0) 100%);
+}
+
+#work-experiences {
+    margin-top: 130px;
+}
+
+#work-experiences h3 {
+    font-size: 30px;
+}
+
+#work-experiences .card {
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.121);
+    border-radius: 10px;
+}
+
+#work-experiences h4 {
+    font-size: 18px;
+}
+
+#work-experiences .format-date {
+    text-align: end;
+}
+
+#work-experiences p {
+    font-size: 14px;
+    color: #16A461;
+}
+
+#work-experiences ul {
+    padding-left: 15px;
+    font-size: 14px;
+    color: #4B5568;
+}
+
+#work-experiences .date {
+    font-size: 14px;
+    color: #4B5568;
+}
+
+#work-experiences .tools span {
+    background-color: #F3F4F6;
+    color: #4B5563;
+    border-radius: 50px;
+    font-size: 12px;
+}
+
+#projects {
+    margin-top: 130px;
+}
+
+#projects h3 {
+    font-size: 30px;
+}
+
+#projects .card {
+    border: none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.121);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+#projects .card:hover {
+    border: none;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.121);
+    border-radius: 10px;
+}
+
+#projects .picture-project {
+    background-color: #F3F4F6;
+    border-radius: 10px 10px 0 0;
+}
+
+#projects .card-body h5 {
+    font-size: 20px;
+}
+
+#projects .card-body p {
+    font-size: 14px;
+    color: #4B5563;
+}
+
+#projects .card-body .tools span {
+    background-color: #F3F4F6;
+    color: #4B5563;
+    border-radius: 50px;
+    font-size: 12px;
+}
+
+#projects .card-body .link span,
+a {
+    font-size: 12px;
+}
+
+#projects .card-body .link span {
+    color: #707280;
+}
+
+#contact {
+    margin-top: 130px;
+}
+
+#contact h3 {
+    font-size: 30px;
+}
+
+#contact .link-contact a,
+span,
+p {
+    font-size: 14px;
+    color: #4B6290;
+}
+
+#contact .link-contact .bi-whatsapp {
+    background-color: #22C55E;
+    padding: 0 3px;
+    border-radius: 50%;
+    color: white;
+}
+
+#contact .pembatas {
+    color: #b5b5b5;
+}
+
+footer {
+    margin-top: 130px;
+    border-top: 1px solid rgb(214, 214, 214);
+}
+
+footer a {
+    font-size: 14px;
+    color: #9CA3AF;
+}
+
+/* dark mode */
+body,
+.navbar,
+.card,
+footer,
+#landing,
+#tools,
+#work-experiences,
+#projects,
+#contact {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+#theme-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode #theme-icon {
+    transform: rotate(180deg);
+    color: #FBBF24;
+}
+
+body.dark-mode {
+    background-color: #111827;
+    color: #E5E7EB;
+}
+
+body.dark-mode h3 {
+    color: #F9FAFB;
+}
+
+body.dark-mode a {
+    color: #60A5FA;
+}
+
+body.dark-mode .card {
+    background-color: #1F2937;
+    color: #D1D5DB;
+    box-shadow: none;
+    border: 1px solid #374151;
+}
+
+body.dark-mode .navbar {
+    background-color: #1F2937 !important;
+}
+
+body.dark-mode .navbar .navbar-toggler {
+    background-color: white;
+}
+
+body.dark-mode .navbar .nav-link,
+body.dark-mode .navbar .btn {
+    color: #E5E7EB !important;
+}
+
+body.dark-mode .navbar .download-cv {
+    background-color: #ffffff;
+    color: #000000 !important;
+    border: none;
+}
+
+body.dark-mode #landing h3 {
+    color: #c5c7ca;
+}
+
+body.dark-mode #landing .profile img {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.283);
+}
+
+body.dark-mode #landing p {
+    color: #c5c7ca;
+}
+
+body.dark-mode #landing span,
+body.dark-mode #landing .lamp-projects {
+    color: #c5c7ca;
+}
+
+body.dark-mode #landing .lamp-projects .circle {
+    background-color: #22C55E;
+}
+
+body.dark-mode #tools .swiper {
+    background-color: #111827;
+}
+
+body.dark-mode #tools .tool {
+    background-color: #182238;
+}
+
+body.dark-mode #tools .swiper::before {
+    left: 0;
+    background: linear-gradient(to right, #111827 0%, rgba(17, 24, 39, 0) 100%);
+}
+
+body.dark-mode #tools .swiper::after {
+    right: 0;
+    background: linear-gradient(to left, #111827 0%, rgba(17, 24, 39, 0) 100%);
+}
+
+body.dark-mode #work-experiences ul li {
+    color: #C5C7CA;
+}
+
+body.dark-mode #work-experiences .date {
+    color: #C5C7CA;
+}
+
+body.dark-mode #projects .card-body p {
+    color: #C5C7CA;
+}
+
+body.dark-mode #contact p,
+body.dark-mode #contact a {
+    color: #C5C7CA;
+}
+
+body.dark-mode #contact span {
+    color: white;
+}
+
+body.dark-mode footer {
+    border-top: 1px solid #374151;
+    color: #9CA3AF;
+}
+
+body.dark-mode footer p,
+body.dark-mode footer a {
+    color: #C5C7CA;
+}
+
+@media(max-width: 992px) {
+    #landing {
+        text-align: center;
+    }
+
+    #landing .col-lg-8 {
+        margin-top: 40px;
+    }
+
+    #landing .col-lg-8 h1 {
+        font-size: 2.5em;
+    }
+
+    #landing .lamp {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #landing .btns {
+        display: grid;
+    }
+
+    #landing .btn {
+        margin-bottom: 10px;
+    }
+
+    #tools h3 {
+        font-size: 1.7em;
+    }
+
+    #work-experiences h3 {
+        font-size: 1.7em;
+    }
+
+    #work-experiences img {
+        margin-bottom: 20px;
+    }
+
+    #work-experiences .card .col-lg-11 .col-lg-6 {
+        text-align: start;
+    }
+
+    #work-experiences .format-date {
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 576px) {
+    #contact .link-contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact .pembatas {
+        display: none;
+    }
+}
